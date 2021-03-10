@@ -1,0 +1,20 @@
+.tecnologia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 1.8rem;
+        color: rgba($color: #ffffff, $alpha: .5);
+    }
+}
+
+.icon {
+    width: 3rem;
+
+    i {
+        font-size: 3rem;
+        color: rgba($color: #ffffff, $alpha: .5);
+    }
+}

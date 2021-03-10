@@ -1,0 +1,83 @@
+.contenedor-proyectos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.proyectos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: $azulClaro;
+    box-shadow: 0 20px 50px $negro;
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 32rem;
+    height: 25rem;
+    transition: 0.4s;
+    margin: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .portada-proyecto {
+        height: 100%;
+        position: absolute;
+        transition: .4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            font-size: 2rem;
+            margin: 3rem 0;
+            line-height: 2.5rem;
+            text-align: center;
+        }
+    }
+
+    .titulo-proyecto {
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        padding: 1rem;
+    }
+
+    .descripcion-proyecto {
+        opacity: 0;
+        transition: .5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &:hover .portada-proyecto {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    &:hover .descripcion-proyecto {
+        opacity: 1;
+    }
+
+    .btn {
+        margin: 1rem;
+        font-size: 1rem;
+        @include boton-scale($rojo, block);
+        padding: .5rem 1rem;
+    }
+
+    p {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}

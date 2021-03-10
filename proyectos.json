@@ -1,0 +1,107 @@
+[
+    {
+        "titulo": "Mi Portfolio",
+        "imagen": "portfolio.jpeg",
+        "descripcion": "Proyecto hecho con HTML, PHP, Javascript y SASS como tecnologías principales.",
+        "link": "https://portfolio-lucasg.000webhostapp.com/",
+        "repositorio": "https://github.com/lucasggonzalez94/Portfolio"
+    },
+    {
+        "titulo": "Buscador de Autos",
+        "imagen": "buscador-autos.jpeg",
+        "descripcion": "Buscador de autos leídos desde un objeto que simula una base de datos local, con distintos filtros de busqueda. Hecho con HTML, CSS y Javascript.",
+        "link": "https://buscador-autos-js.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/BuscadorDeAutos"
+    },
+    {
+        "titulo": "Citas en Veterinaria",
+        "imagen": "citas-vete.jpeg",
+        "descripcion": "Proyecto de registro de turnos para una veterinaria, Hecho principalmente con React JS.",
+        "link": "https://citas-vete-react.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/CitasConReact"
+    },
+    {
+        "titulo": "Carrito de Compras",
+        "imagen": "carrito.jpeg",
+        "descripcion": "Modelo de una academia online de cursos de programación, el objetivo fue maquetar el sitio principal con HTML y CSS y agregar la funcionalidad del carrito de compras con JavaScript.",
+        "link": "https://beprogrammer.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/carritoDeComprasPropio"
+    },
+    {
+        "titulo": "Cotizador de Criptomonedas",
+        "imagen": "cripto.jpeg",
+        "descripcion": "Proyecto de cotizacion de criptomonedas a monedas fisicas, se utilizó la API CryptoCompare y JavaScript.",
+        "link": "https://cotizador-criptomonedas-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/Criptomonedas"
+    },
+    {
+        "titulo": "Cotizador Criptomonedas con React",
+        "imagen": "cripto-react.jpeg",
+        "descripcion": "Proyecto de cotizacion de criptomonedas a monedas fisicas, se utilizó la API CryptoCompare y React JS.",
+        "link": "https://criptomonedas-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/criptomonedas-react"
+    },
+    {
+        "titulo": "Buscador de Recetas Bebidas",
+        "imagen": "bebidas.jpeg",
+        "descripcion": "Proyecto hecho React JS y consumiendo la API TheCocktailDB para consultar las recetas.",
+        "link": "https://bebidas-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/bebidas"
+    },
+    {
+        "titulo": "Frases de Breaking Bad",
+        "imagen": "frases.jpeg",
+        "descripcion": "Obteniendo frases de Breaking Bad con React JS y consumiento la api Breakingbadquotes.",
+        "link": "https://breaking-bad-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/breakingbad"
+    },
+    {
+        "titulo": "Control de Presupuesto",
+        "imagen": "gastos.jpeg",
+        "descripcion": "Proyecto de control de presupuesto hecho con React JS.",
+        "link": "https://gastos-react.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/presupuestoReact"
+    },
+    {
+        "titulo": "Turnos Peluquería",
+        "imagen": "peluqueria.jpeg",
+        "descripcion": "Proyecto de administracion de turnos para una peluquería, con conexion a base de datos MySQL.",
+        "link": "https://app-peluqueria-react.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/AppPeluqueria"
+    },
+    {
+        "titulo": "Buscador GitHub Jobs",
+        "imagen": "github.jpeg",
+        "descripcion": "Consumiento API de GitHub Jobs con React JS.",
+        "link": "https://github-jobs-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/GithubJobs"
+    },
+    {
+        "titulo": "Buscador de Letras",
+        "imagen": "letras.jpeg",
+        "descripcion": "Buscador de letras de canciones consumiento APIs lyrics y TheAudioDB con React JS.",
+        "link": "https://buscador-letras-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/letras-react"
+    },
+    {
+        "titulo": "Cotizador de Seguros",
+        "imagen": "seguros.jpeg",
+        "descripcion": "Cotizador de seguros para autos, tiene en cuenta el modelo, region del fabricante de la marca y tipo de plan. Hecho con React JS.",
+        "link": "https://cotizador-seguros-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/cotizadorSeguros"
+    },
+    {
+        "titulo": "Festival de Rock",
+        "imagen": "festival.jpeg",
+        "descripcion": "Proyecto utilizando HTML, SASS, JavaScript y funciones de Gulp.",
+        "link": "https://festival-rock.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/FestivalDeMusicaDeployment"
+    },
+    {
+        "titulo": "TA-TE-TI",
+        "imagen": "tateti.jpeg",
+        "descripcion": "Proyecto de TA-TE-TI, muy básico como práctica.",
+        "link": "https://ta-te-ti-basico.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/TATETI"
+    }
+]

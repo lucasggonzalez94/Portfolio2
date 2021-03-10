@@ -1,0 +1,101 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    background-color: $azulFondo;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.webp .background {
+    background-image: url(/build/img/bg.webp);
+}
+
+.no-webp .background {
+    background-image: url(/build/img/bg.jpg);
+}
+
+p {
+    color: $blanco;
+    font-size: 2rem;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.contenido {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    @include boton($rojo, block);
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: $blanco;
+}
+
+span {
+    color: $blanco;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    color: $blanco;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+
+    @include telefono {
+        font-size: 3.4rem;
+    }
+}
+h3 {
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+h4 {
+    font-size: 2.6rem;
+}

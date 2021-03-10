@@ -1,0 +1,76 @@
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: $telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin media-min($minwidth) {
+    @media (min-width: $minwidth) {
+        @content;
+    }
+}
+
+@mixin media-max($maxwidth) {
+    @media (max-width: $maxwidth) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin boton($bgcolor, $display) {
+    background-color: $bgcolor;
+    color: $blanco;
+    font-weight: $bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: $separacion / 2;
+    display: $display;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: all .3s;
+
+    &:hover {
+        background-color: rgba($color: #000000, $alpha: 0);
+        box-shadow: inset 0 0 0 3px $bgcolor;
+        color: $bgcolor;
+    }
+}
+
+@mixin boton-scale($bgcolor, $display) {
+    background: $bgcolor;
+    color: $blanco;
+    font-weight: $bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: $separacion / 2;
+    display: $display;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: 0.5s;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+}
