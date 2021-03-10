@@ -247,6 +247,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *" value="<?php echo $asunto ?>">
                             <textarea name="mensaje" id="mensaje"><?php echo $mensaje ?></textarea>
 
+                            <div class="alerta error">Servicio deshabilitado temporalmente</div>
+
                             <?php foreach ($errores as $error) : ?>
                                 <div class="alerta error">
                                     <?php echo $error; ?>
