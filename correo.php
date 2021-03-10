@@ -76,6 +76,7 @@
         header('location: /');
     }else {
         $_SESSION['resultado'] = 0;
+        header('location: /');
     }
 
     // var_dump($nombre);
