@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     esconderMenu();
     copyright();
     resetFormulario();
+    typed();
+    // window.addEventListener('scroll', entradaElementos);
     
 })
 
@@ -116,6 +118,9 @@ function agregarHTML(proyectos) {
 
 }
 
+// Animaciones
+
+// Sliders
 async function owlCarousel() {
 
     await agregarProyectos();
@@ -152,3 +157,36 @@ async function owlCarousel() {
         })
     });
 }
+
+// Texto tipeado
+function typed() {
+    let typed = new Typed('.typing', {
+        strings: ['Junior', 'Web', 'Front End', 'Back End'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
+    })
+}
+
+// Animacion entrada
+// let animados = document.querySelectorAll('.animado');
+
+// function entradaElementos() {
+//     let scrollTop = document.documentElement.scrollTop;
+
+//     animados.forEach(animado => {
+//         let posicionElemento = animado.offsetTop;
+
+//         if (posicionElemento - 300 < scrollTop) {
+//             animado.style.opacity = 1;
+
+//             if (animado.classList.contains('derecha')) {
+//                 animado.style.transform = 'translateX(0)';
+//             }
+
+//             if (animado.classList.contains('izquierda')) {
+//                 animado.style.transform = 'translateX(0)';
+//             }
+//         }
+//     });
+// }

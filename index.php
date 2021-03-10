@@ -70,11 +70,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Portfolio Lucas Gonzalez">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' integrity='sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==' crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js' integrity='sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="/build/icomoon/style.css">
     <link rel="stylesheet" href="/build/css/app.css">
     <link rel="shortcut icon" href="build/img/favicon.png">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' integrity='sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==' crossorigin='anonymous'></script>
     <title>Lucas González | Portfolio</title>
 </head>
@@ -97,17 +98,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <span>¡Hola!, soy</span>
                 <h1>Lucas González</h1>
-                <span>Desarrollador Junior</span>
+                <span>Desarrollador <span class="typing"></span></span>
                 <a href="#contacto" class="btn">Contáctame</a>
             </div>
         </main>
 
-        <section id="sobre-mi" class="contenedor">
+        <section id="sobre-mi" class="contenedor animado izquierda">
             <h2>Sobre Mí</h2>
             <p>Te cuento un poco sobre mí. Soy estudiante de programación, tanto autodidacta como a nivel universitario, cursando el último cuatrimestre en la Tecnicatura Superior en Programación de la Universidad Tecnológica Nacional, estoy en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías, especializandome en el desarrollo web, tanto en el front-end como en el back-end. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de expandir mis conocimientos en las tecnologías actuales.</p>
         </section>
 
-        <section class="contenedor" id="proyectos">
+        <section class="contenedor animado derecha" id="proyectos">
             <div class="contenido" id="habilidades">
                 <div class="owl-carousel">
                     <div class="tecnologia item">
@@ -212,7 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </section>
     </div>
 
-    <section class="contenedor" id="contacto">
+    <section class="contenedor animado izquierda" id="contacto">
         <div class="contenedor-contacto">
 
             <div class="info-contacto">

@@ -14,8 +14,12 @@
         }
 
         span {
-            display: block;
+            display: flex;
             font-size: 3rem;
+
+            .typing {
+                margin-left: 1rem;
+            }
         }
 
         @include media-max(880px) {
