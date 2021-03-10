@@ -6,11 +6,19 @@
     margin: 0 2rem;
     width: auto;
 
+    @include media-max(768px) {
+        margin: 0 1.5rem;
+    }
+
     p {
         font-size: 1.8rem;
         color: rgba($color: #ffffff, $alpha: .5);
         margin: 0;
         text-align: center;
+
+        @include media-max(768px) {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -20,9 +28,17 @@
     justify-content: center;
     align-items: center;
 
+    @include media-max(768px) {
+        width: 2.5rem;
+    }
+
     i {
         font-size: 3rem;
         color: rgba($color: #ffffff, $alpha: .5);
+
+        @include media-max(768px) {
+            font-size: 2.5rem;
+        }
     }
 }
 

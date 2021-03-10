@@ -2,7 +2,13 @@
     background-color: rgba($color: $azulFondo, $alpha: .5);
 
     p {
-        width: 50%;
+        width: 90%;
         text-align: center;
+        font-size: 1.2rem;
+
+        @include desktop {
+            width: 50%;
+            font-size: 1.5rem;
+        }
     }
 }

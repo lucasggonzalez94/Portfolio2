@@ -80,7 +80,6 @@
                 <nav class="navegacion">
                     <a href="#inicio" id="link-inicio">Inicio</a>
                     <a href="#sobre-mi" id="link-sobre-mi">Sobre mí</a>
-                    <!-- <a href="#habilidades" id="link-habilidades">Habilidades</a> -->
                     <a href="#proyectos" id="link-proyectos">Proyectos</a>
                     <a href="#contacto" id="link-contacto">Contacto</a>
                 </nav>
@@ -207,6 +206,24 @@
 
     <section class="contenedor" id="contacto">
         <div class="contenedor-contacto">
+
+            <div class="info-contacto">
+                <h2>Contacto</h2>
+
+                <div class="items">
+                    <p><i class="fas fa-map-marker-alt"></i> Mendoza - Argentina</p>
+                    <a href="mailto:lucasggonzalez@outlook.com" class="link-contacto"><i class="fas fa-envelope"></i> lucasggonzalez@outlook.com</a>
+                    <a href="https://wa.link/kq0zdb" target="_blank" class="link-contacto"><i class="fab fa-whatsapp"></i>
+                        +54-2616209794</a>
+                </div>
+
+                <div class="enlaces-contacto">
+                    <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/lucasggonzalez94" target="_blank"><i class="fab fa-github-square"></i></a>
+                </div>
+            </div>
+
             <div class="formulario">
                 <form method="post" id="formulario">
                     <div class="inputs">
@@ -259,23 +276,6 @@
                 </form>
 
                 <p id="copyright"></p>
-            </div>
-
-            <div class="info-contacto">
-                <h2>Contacto</h2>
-
-                <div class="items">
-                    <p><i class="fas fa-map-marker-alt"></i> Mendoza - Argentina</p>
-                    <a href="mailto:lucasggonzalez@outlook.com" class="link-contacto"><i class="fas fa-envelope"></i> lucasggonzalez@outlook.com</a>
-                    <a href="https://wa.link/kq0zdb" target="_blank" class="link-contacto"><i class="fab fa-whatsapp"></i>
-                        +54-2616209794</a>
-                </div>
-
-                <div class="enlaces-contacto">
-                    <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/lucasggonzalez94" target="_blank"><i class="fab fa-github-square"></i></a>
-                </div>
             </div>
         </div>
     </section>

@@ -128,22 +128,24 @@ async function owlCarousel() {
             autoplayTimeout: 1000,
             autoplayHoverPause: true,
             autoWidth: true,
-            center: true,
+            center: true
         })
 
         $('.proyectos').owlCarousel({
             nav: true,
             navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-            autoWidth: true,
             responsiveClass: true,
             responsive: {
                 0: {
                     items: 1
                 },
-                600: {
+                530: {
+                    items: 2
+                },
+                800: {
                     items: 3
                 },
-                1000: {
+                1700: {
                     items: 5
                 }
             }

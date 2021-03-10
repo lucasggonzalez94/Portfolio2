@@ -17,6 +17,56 @@
             display: block;
             font-size: 3rem;
         }
+
+        @include media-max(880px) {
+            padding-left: 10rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        @include media-max(520px) {
+            padding-left: 5rem;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            span {
+                font-size: 1.4rem;
+            }
+
+            .btn {
+                padding: .8rem 1.8rem;
+                font-size: 1.4rem;
+            }
+        }
+
+        @include media-max(520px) {
+            padding-left: 5rem;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            span {
+                font-size: 1.4rem;
+            }
+
+            .btn {
+                padding: .8rem 1.8rem;
+                font-size: 1rem;
+            }
+        }
+
+        @include media-max(520px) {
+            padding-left: 2.5rem;
+        }
     }
 }
 
@@ -29,10 +79,14 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-135deg, $azulFondo, $rojo);
-    clip-path: circle(25px at calc(100% -45px) 45px);
+    background: linear-gradient(-135deg, $rojo, $azulFondo 60%);
+    clip-path: circle(20px at calc(100% - 40px) 40px);
     transition: all .3s ease-in-out;
     z-index: 9;
+
+    @include desktop {
+        clip-path: circle(25px at calc(100% - 45px) 45px);
+    }
 
     a {
         font-weight: $bold;
@@ -67,20 +121,6 @@
             color: $azulOscuro;
         }
     }
-
-    // @include desktop {
-    //     justify-content: flex-end;
-    //     flex-direction: row;
-    //     height: 12rem;
-    //     background: rgba($color: #000000, $alpha: 0);
-    //     clip-path: circle(75%);
-    //     position: relative;
-
-    //     a {
-    //         margin-top: 0;
-    //         margin-right: 5rem;
-    //     }
-    // }
 }
 
 #active:checked ~ .navegacion {
@@ -99,9 +139,9 @@
         top: 2rem;
         z-index: 10;
         text-align: center;
-        line-height: 5rem;
-        height: 5rem;
-        width: 5rem;
+        line-height: 4rem;
+        height: 4rem;
+        width: 4rem;
         background: $rojo;
         border-radius: 50%;
         color: $azulFondo;
@@ -109,21 +149,19 @@
         cursor: pointer;
         transition: all .3s ease;
 
-        // @include desktop {
-        //     display: none;
-        // }
+        @include desktop {
+            line-height: 5rem;
+            height: 5rem;
+            width: 5rem;
+            font-size: 2.8rem;
+        }
     }
 }
 
 #active:checked ~ .btn-menu {
     background: $blanco;
-    // color: $moradoOscuro;
 }
 
 #active:checked ~ .btn-menu i:before {
     content: "\f00d";
-}
-
-.btn-dark {
-    font-size: 3rem;
 }
