@@ -1,68 +1,75 @@
 <?php
-    session_start();
-    // echo $_SESSION['resultado'];
+session_start();
 
-    $nombre = '';
-    $apellido = '';
-    $email = '';
-    $telefono = '';
-    $empresa = '';
-    $asunto = '';
-    $mensaje = '';
+$nombre = '';
+$apellido = '';
+$email = '';
+$telefono = '';
+$empresa = '';
+$asunto = '';
+$mensaje = '';
 
-    $errores = [];
+$errores = [];
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Validar que los campos no esten vacios
-        $nombre = ($_POST['nombre']);
-        $apellido = $_POST['apellido'];
-        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-        $telefono = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
-        $empresa = $_POST['empresa'];
-        $asunto = $_POST['asunto'];
-        $mensaje = $_POST['mensaje'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        $_SESSION['nombre'] = $nombre;
-        $_SESSION['apellido'] = $apellido;
-        $_SESSION['email'] = $email;
-        $_SESSION['telefono'] = $telefono;
-        $_SESSION['empresa'] = $empresa;
-        $_SESSION['asunto'] = $asunto;
-        $_SESSION['mensaje'] = $mensaje;
+    // echo '<pre>';
+    // var_dump($_POST);
+    // echo '</pre>';
 
-        // Validar que los campos tengan el contenido adecuado
-        if (!$nombre) {
-            $errores[] = 'El nombre es obligatorio';
-        }
+    // Validar que los campos no esten vacios
+    $nombre = ($_POST['nombre']);
+    $apellido = $_POST['apellido'];
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $telefono = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
+    $empresa = $_POST['empresa'];
+    $asunto = $_POST['asunto'];
+    $mensaje = $_POST['mensaje'];
 
-        if (!$apellido) {
-            $errores[] = 'El apellido es obligatorio';
-        }
+    $_SESSION['nombre'] = $nombre;
+    $_SESSION['apellido'] = $apellido;
+    $_SESSION['email'] = $email;
+    $_SESSION['telefono'] = $telefono;
+    $_SESSION['empresa'] = $empresa;
+    $_SESSION['asunto'] = $asunto;
+    $_SESSION['mensaje'] = $mensaje;
 
-        if (!$email) {
-            $errores[] = 'El e-mail es obligatorio o no es válido';
-        }
+    // Validar que los campos tengan el contenido adecuado
+    if (!$nombre) {
+        $errores[] = 'El nombre es obligatorio';
+    }
 
-        if (!$asunto) {
-            $errores[] = 'El asunto es obligatorio';
-        }
+    if (!$apellido) {
+        $errores[] = 'El apellido es obligatorio';
+    }
 
-        if (!$mensaje) {
-            $errores[] = 'El mensaje es obligatorio';
-        }
-        
-        // Enviar email
+    if (!$email) {
+        $errores[] = 'El e-mail es obligatorio o no es válido';
+    }
+
+    if (!$asunto) {
+        $errores[] = 'El asunto es obligatorio';
+    }
+
+    if (!$mensaje) {
+        $errores[] = 'El mensaje es obligatorio';
+    }
+
+    // Enviar email
+    if (empty($errores)) {
         header('location: correo.php');
     }
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Portfolio Lucas Gonzalez">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' integrity='sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' integrity='sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==' crossorigin='anonymous' />
     <link rel="stylesheet" href="/build/icomoon/style.css">
     <link rel="stylesheet" href="/build/css/app.css">
     <link rel="shortcut icon" href="build/img/favicon.png">
@@ -71,6 +78,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' integrity='sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==' crossorigin='anonymous'></script>
     <title>Lucas González | Portfolio</title>
 </head>
+
 <body>
     <div class="background">
         <main class="main" id="inicio">
@@ -95,8 +103,8 @@
         </main>
 
         <section id="sobre-mi" class="contenedor">
-                <h2>Sobre Mí</h2>
-                <p>Te cuento un poco sobre mí. Soy estudiante de programación, tanto autodidacta como a nivel universitario, cursando el último cuatrimestre en la Tecnicatura Superior en Programación de la Universidad Tecnológica Nacional, estoy en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías, especializandome en el desarrollo web, tanto en el front-end como en el back-end. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de expandir mis conocimientos en las tecnologías actuales.</p>
+            <h2>Sobre Mí</h2>
+            <p>Te cuento un poco sobre mí. Soy estudiante de programación, tanto autodidacta como a nivel universitario, cursando el último cuatrimestre en la Tecnicatura Superior en Programación de la Universidad Tecnológica Nacional, estoy en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías, especializandome en el desarrollo web, tanto en el front-end como en el back-end. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de expandir mis conocimientos en las tecnologías actuales.</p>
         </section>
 
         <section class="contenedor" id="proyectos">
@@ -218,8 +226,7 @@
                 </div>
 
                 <div class="enlaces-contacto">
-                    <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/lucasggonzalez94" target="_blank"><i class="fab fa-github-square"></i></a>
                 </div>
             </div>
@@ -240,14 +247,14 @@
                             <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *" value="<?php echo $asunto ?>">
                             <textarea name="mensaje" id="mensaje"><?php echo $mensaje ?></textarea>
 
-                            <?php foreach($errores as $error): ?>
+                            <?php foreach ($errores as $error) : ?>
                                 <div class="alerta error">
                                     <?php echo $error; ?>
                                 </div>
                             <?php endforeach; ?>
 
-                            <?php if(isset($_SESSION['resultado'])):
-                                if($_SESSION['resultado'] === 0):?>
+                            <?php if (isset($_SESSION['resultado'])) :
+                                if ($_SESSION['resultado'] === 0) : ?>
                                     <script>
                                         Swal.fire({
                                             icon: 'error',
@@ -258,7 +265,7 @@
                                     </script>
                                 <?php endif;
 
-                                if($_SESSION['resultado'] === 1):?>
+                                if ($_SESSION['resultado'] === 1) : ?>
                                     <script>
                                         Swal.fire({
                                             icon: 'success',
@@ -267,7 +274,7 @@
                                             timer: 2500
                                         })
                                     </script>
-                                <?php endif;
+                            <?php endif;
                             endif; ?>
 
                             <input type="submit" value="Enviar" class="btn">
@@ -283,6 +290,7 @@
     <script src="https://kit.fontawesome.com/59e2cd1765.js" crossorigin="anonymous"></script>
     <script src="/build/js/bundle.min.js"></script>
 </body>
+
 </html>
 <?php
-    $_SESSION['resultado'] = 3;
+$_SESSION['resultado'] = 3;
