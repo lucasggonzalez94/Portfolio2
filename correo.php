@@ -42,9 +42,11 @@
     // exit;
 
     if ($mail) {
+        echo "Enviado";
         $_SESSION['resultado'] = 1;
         header('location: /');
     }else {
+        echo "No enviado";
         $_SESSION['resultado'] = 0;
     }
 
