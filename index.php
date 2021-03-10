@@ -62,10 +62,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Portfolio Lucas Gonzalez">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' integrity='sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==' crossorigin='anonymous'/>
     <link rel="stylesheet" href="/build/icomoon/style.css">
     <link rel="stylesheet" href="/build/css/app.css">
     <link rel="shortcut icon" href="build/img/favicon.png">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' integrity='sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==' crossorigin='anonymous'></script>
     <title>Lucas González | Portfolio</title>
 </head>
 <body>
@@ -94,106 +97,109 @@
 
         <section id="sobre-mi" class="contenedor">
                 <h2>Sobre Mí</h2>
-                <p>¡Hola! te cuento un poco sobre mí. Soy estudiante de programación, tanto autodidacta como a nivel universitario, cursando el último cuatrimestre en la Tecnicatura Superior en Programación de la Universidad Tecnológica Nacional, estoy en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías, especializandome en el desarrollo web, tanto en el front-end como en el back-end. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de expandir mis conocimientos en las tecnologías actuales.</p>
+                <p>Te cuento un poco sobre mí. Soy estudiante de programación, tanto autodidacta como a nivel universitario, cursando el último cuatrimestre en la Tecnicatura Superior en Programación de la Universidad Tecnológica Nacional, estoy en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías, especializandome en el desarrollo web, tanto en el front-end como en el back-end. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de expandir mis conocimientos en las tecnologías actuales.</p>
         </section>
 
         <section class="contenedor" id="proyectos">
             <div class="contenido" id="habilidades">
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-html5"></i>
+                <div class="owl-carousel">
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <p>HTML</p>
                     </div>
-                    <p>HTML</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-css3-alt"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <p>CSS</p>
                     </div>
-                    <p>CSS</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-sass"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-sass"></i>
+                        </div>
+                        <p>SASS/SCSS</p>
                     </div>
-                    <p>SASS/SCSS</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-js-square"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <p>JavaScript</p>
                     </div>
-                    <p>JavaScript</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-react"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <p>React JS</p>
                     </div>
-                    <p>React JS</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-node"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-node"></i>
+                        </div>
+                        <p>Node JS</p>
                     </div>
-                    <p>Node JS</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-java"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <p>Java</p>
                     </div>
-                    <p>Java</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="icon-csharp"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="icon-csharp"></i>
+                        </div>
+                        <p>C# (.NET)</p>
                     </div>
-                    <p>C# (.NET)</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-php"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-php"></i>
+                        </div>
+                        <p>PHP</p>
                     </div>
-                    <p>PHP</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fas fa-database"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <p>MySQL</p>
                     </div>
-                    <p>MySQL</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-git"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-git"></i>
+                        </div>
+                        <p>GIT</p>
                     </div>
-                    <p>GIT</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="icon-adobephotoshop"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="icon-adobephotoshop"></i>
+                        </div>
+                        <p>Photoshop</p>
                     </div>
-                    <p>Photoshop</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="icon-adobeillustrator"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="icon-adobeillustrator"></i>
+                        </div>
+                        <p>Illustrator</p>
                     </div>
-                    <p>Illustrator</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-windows"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <p>Windows</p>
                     </div>
-                    <p>Windows</p>
-                </div>
-                <div class="tecnologia">
-                    <div class="icon">
-                        <i class="fab fa-linux"></i>
+                    <div class="tecnologia item">
+                        <div class="icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <p>Linux</p>
                     </div>
-                    <p>Linux</p>
                 </div>
             </div>
             <div class="contenido">
                 <div class="contenedor-proyectos">
                     <h2>Proyectos</h2>
-                    <div class="proyectos"></div>
+                    <div class="proyectos owl-carousel">
+                    </div>
                 </div>
             </div>
         </section>

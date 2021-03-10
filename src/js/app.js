@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    agregarProyectos();
+    // agregarProyectos();
+    owlCarousel();
     esconderMenu();
     copyright();
     resetFormulario();
-
+    
 })
 
 function resetFormulario() {
@@ -22,7 +23,6 @@ function esconderMenu() {
     links = [
         linkInicio = document.querySelector('#link-inicio'),
         linkSobreMi = document.querySelector('#link-sobre-mi'),
-        // linkTecnologias = document.querySelector('#link-habilidades'),
         linkProyectos = document.querySelector('#link-proyectos'),
         linkContacto = document.querySelector('#link-contacto')
     ]
@@ -60,7 +60,7 @@ function agregarHTML(proyectos) {
         const {titulo, imagen, descripcion, link, repositorio} = proyecto;
 
         const articleProyecto = document.createElement('article');
-        articleProyecto.classList.add('card');
+        articleProyecto.classList.add('card', 'item');
 
         const divPortada = document.createElement('div');
         divPortada.classList.add('portada-proyecto');
@@ -114,4 +114,39 @@ function agregarHTML(proyectos) {
         divProyectos.appendChild(articleProyecto);
     });
 
+}
+
+async function owlCarousel() {
+
+    await agregarProyectos();
+
+    $(document).ready(function () {
+        $('#habilidades .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            autoWidth: true,
+            center: true,
+        })
+
+        $('.proyectos').owlCarousel({
+            nav: true,
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            autoWidth: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    });
 }

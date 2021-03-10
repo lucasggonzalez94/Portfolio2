@@ -3,18 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 2rem;
+    width: auto;
 
     p {
         font-size: 1.8rem;
         color: rgba($color: #ffffff, $alpha: .5);
+        margin: 0;
+        text-align: center;
     }
 }
 
 .icon {
     width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     i {
         font-size: 3rem;
         color: rgba($color: #ffffff, $alpha: .5);
     }
+}
+
+.owl-carousel .owl-dots {
+    display: none;
 }
