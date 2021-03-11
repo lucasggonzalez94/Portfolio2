@@ -13,10 +13,6 @@ $errores = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // echo '<pre>';
-    // var_dump($_POST);
-    // echo '</pre>';
-
     // Validar que los campos no esten vacios
     $nombre = ($_POST['nombre']);
     $apellido = $_POST['apellido'];

@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // agregarProyectos();
     owlCarousel();
     esconderMenu();
     copyright();
     resetFormulario();
     typed();
-    // window.addEventListener('scroll', entradaElementos);
     
 })
 
@@ -167,26 +165,3 @@ function typed() {
         loop: true,
     })
 }
-
-// Animacion entrada
-// let animados = document.querySelectorAll('.animado');
-
-// function entradaElementos() {
-//     let scrollTop = document.documentElement.scrollTop;
-
-//     animados.forEach(animado => {
-//         let posicionElemento = animado.offsetTop;
-
-//         if (posicionElemento - 300 < scrollTop) {
-//             animado.style.opacity = 1;
-
-//             if (animado.classList.contains('derecha')) {
-//                 animado.style.transform = 'translateX(0)';
-//             }
-
-//             if (animado.classList.contains('izquierda')) {
-//                 animado.style.transform = 'translateX(0)';
-//             }
-//         }
-//     });
-// }
