@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     owlCarousel();
     esconderMenu();
     copyright();
-    // resetFormulario();
+    resetFormulario();
     typed();
-    // enviarEmail();
+    enviarEmail();
     
 })
 
-// function resetFormulario() {
-//     const formularioContacto = document.querySelector('#formulario');
-//     formularioContacto.reset();
-// }
+function resetFormulario() {
+    const formularioContacto = document.querySelector('#formulario');
+    formularioContacto.reset();
+}
 
 function copyright() {
     const copyright = document.querySelector('#copyright');
@@ -168,46 +168,81 @@ function typed() {
 }
 
 // Envío de email
-// function enviarEmail() {
-//     const formulario = document.querySelector('#formulario');
+function enviarEmail() {
+    const formulario = document.querySelector('#formulario');
+    const fieldset = document.querySelector('#fieldset');
 
-//     emailjs.init("user_8qf1JRuCro6YqSOiaiM5B");
+    emailjs.init("user_8qf1JRuCro6YqSOiaiM5B");
 
-//     formulario.addEventListener('submit', e => {
-//         e.preventDefault();
+    formulario.addEventListener('submit', e => {
+        e.preventDefault();
 
-//         const nombre = document.querySelector('#nombre');
-//         const apellido = document.querySelector('#apellido');
-//         const email = document.querySelector('#email');
-//         const tel = document.querySelector('#tel');
-//         const empresa = document.querySelector('#empresa');
-//         const asunto = document.querySelector('#asunto');
-//         const mensaje = document.querySelector('#mensaje');
+        const nombre = document.querySelector('#nombre').value.trim();
+        const apellido = document.querySelector('#apellido').value.trim();
+        const email = document.querySelector('#email').value.trim();
+        const tel = document.querySelector('#tel').value.trim();
+        const empresa = document.querySelector('#empresa').value.trim();
+        const asunto = document.querySelector('#asunto').value.trim();
+        const mensaje = document.querySelector('#mensaje').value.trim();
 
-//         const parametros = {
-//             name: nombre + ' ' + apellido,
-//             email: email,
-//             phone: tel,
-//             organization: empresa,
-//             subject: asunto,
-//             message: mensaje
-//         };
+        if (nombre === '' || apellido === '' || email === '' || asunto === '' || mensaje === '') {
 
-//         emailjs.send('service_mailjet', 'form-contacto', parametros)
-//             .then(() => {
-//                 Swal.fire({
-//                     icon: 'success',
-//                     title: 'Email enviado correctamente',
-//                     showConfirmButton: false,
-//                     timer: 2500
-//                 })
-//             }, () => {
-//                 Swal.fire({
-//                     icon: 'error',
-//                     title: 'Error al enviar email',
-//                     showConfirmButton: false,
-//                     timer: 2500
-//                 })
-//             });
-//     })
-// }
+            Swal.fire({
+                icon: 'error',
+                title: 'Complete los campos correctamente',
+                showConfirmButton: false,
+                timer: 2500
+            })
+
+            return;
+        }
+
+        const parametros = {
+            name: nombre + ' ' + apellido,
+            email: email,
+            phone: tel,
+            organization: empresa,
+            subject: asunto,
+            message: mensaje
+        };
+
+        const spinner = document.createElement('div');
+        spinner.classList.add('sk-circle');
+        spinner.innerHTML = `<div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>`;
+
+        fieldset.appendChild(spinner);
+
+        emailjs.send('service_gmail', 'form-contacto', parametros)
+            .then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Email enviado correctamente',
+                    showConfirmButton: false,
+                    timer: 2500
+                })
+
+                fieldset.removeChild(spinner);
+                resetFormulario();
+            }, () => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error al enviar email',
+                    showConfirmButton: false,
+                    timer: 2500
+                })
+
+                fieldset.removeChild(spinner);
+            });
+    })
+}
