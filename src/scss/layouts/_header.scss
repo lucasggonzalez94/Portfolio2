@@ -19,6 +19,10 @@
 
             .typing {
                 margin-left: 1rem;
+
+                @include media-max(520px) {
+                    margin-left: .5rem;
+                }
             }
         }
 
@@ -168,4 +172,23 @@
 
 #active:checked ~ .btn-menu i:before {
     content: "\f00d";
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $azulOscuro;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    a {
+        font-size: 2.5rem;
+        margin-right: 3rem;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
 }

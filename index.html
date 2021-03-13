@@ -1,63 +1,3 @@
-<?php
-session_start();
-
-$nombre = '';
-$apellido = '';
-$email = '';
-$telefono = '';
-$empresa = '';
-$asunto = '';
-$mensaje = '';
-
-$errores = [];
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    // Validar que los campos no esten vacios
-    $nombre = ($_POST['nombre']);
-    $apellido = $_POST['apellido'];
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $telefono = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
-    $empresa = $_POST['empresa'];
-    $asunto = $_POST['asunto'];
-    $mensaje = $_POST['mensaje'];
-
-    $_SESSION['nombre'] = $nombre;
-    $_SESSION['apellido'] = $apellido;
-    $_SESSION['email'] = $email;
-    $_SESSION['telefono'] = $telefono;
-    $_SESSION['empresa'] = $empresa;
-    $_SESSION['asunto'] = $asunto;
-    $_SESSION['mensaje'] = $mensaje;
-
-    // Validar que los campos tengan el contenido adecuado
-    if (!$nombre) {
-        $errores[] = 'El nombre es obligatorio';
-    }
-
-    if (!$apellido) {
-        $errores[] = 'El apellido es obligatorio';
-    }
-
-    if (!$email) {
-        $errores[] = 'El e-mail es obligatorio o no es válido';
-    }
-
-    if (!$asunto) {
-        $errores[] = 'El asunto es obligatorio';
-    }
-
-    if (!$mensaje) {
-        $errores[] = 'El mensaje es obligatorio';
-    }
-
-    // Enviar email
-    if (empty($errores)) {
-        header('location: correo.php');
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -95,16 +35,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <span>¡Hola!, soy</span>
                 <h1>Lucas González</h1>
                 <span>Desarrollador <span class="typing"></span></span>
-                <a href="#contacto" class="btn">Contáctame</a>
+                <a href="https://drive.google.com/uc?id=1AEglt4MnWnOcmfvdGeQv4Fz-7Mw6UCgn&export=download" class="btn" target="_blank">Descargar CV</a>
+            </div>
+
+            <div class="contacto">
+                <a href="mailto:lucasggonzalez@outlook.com"><i class="fas fa-envelope-square"></i></a>
+                <a href="https://wa.link/kq0zdb" target="_blank"><i class="fab fa-whatsapp-square"></i></a>
+                <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/lucasggonzalez94" target="_blank"><i class="fab fa-github-square"></i></a>
             </div>
         </main>
 
-        <section id="sobre-mi" class="contenedor animado izquierda">
+        <section id="sobre-mi" class="contenedor">
             <h2>Sobre Mí</h2>
             <p>Te cuento un poco sobre mí. Soy estudiante de programación, tanto autodidacta como a nivel universitario, cursando el último cuatrimestre en la Tecnicatura Superior en Programación de la Universidad Tecnológica Nacional, estoy en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías, especializandome en el desarrollo web, tanto en el front-end como en el back-end. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de expandir mis conocimientos en las tecnologías actuales.</p>
         </section>
 
-        <section class="contenedor animado derecha" id="proyectos">
+        <section class="contenedor" id="proyectos">
             <div class="contenido" id="habilidades">
                 <div class="owl-carousel">
                     <div class="tecnologia item">
@@ -202,14 +149,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="contenido">
                 <div class="contenedor-proyectos">
                     <h2>Proyectos</h2>
-                    <div class="proyectos owl-carousel">
-                    </div>
+                    <div class="proyectos owl-carousel"></div>
                 </div>
+            </div>
+
+            <div class="copyright">
+                <p id="copyright"></p>
             </div>
         </section>
     </div>
 
-    <section class="contenedor animado izquierda" id="contacto">
+    <!-- <section class="contenedor animado izquierda" id="contacto">
         <div class="contenedor-contacto">
 
             <div class="info-contacto">
@@ -226,55 +176,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/lucasggonzalez94" target="_blank"><i class="fab fa-github-square"></i></a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="formulario">
+            <!-- <div class="formulario">
                 <form method="post" id="formulario">
                     <div class="inputs">
                         <fieldset>
                             <legend>Envíame un E-mail</legend>
                             <div class="nombre-apellido">
-                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *" value="<?php echo $nombre ?>">
-                                <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *" value="<?php echo $apellido ?>">
+                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *" value="">
+                                <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *" value="">
                             </div>
 
-                            <input type="email" name="email" id="email" placeholder="Tu Email *" value="<?php echo $email ?>">
-                            <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono" value="<?php echo $telefono ?>">
-                            <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa" value="<?php echo $empresa ?>">
-                            <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *" value="<?php echo $asunto ?>">
-                            <textarea name="mensaje" id="mensaje"><?php echo $mensaje ?></textarea>
+                            <input type="email" name="email" id="email" placeholder="Tu Email *" value="">
+                            <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono" value="">
+                            <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa" value="">
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *" value="">
+                            <textarea name="mensaje" id="mensaje"></textarea>
 
                             <div class="alerta error">Servicio deshabilitado temporalmente</div>
-
-                            <?php foreach ($errores as $error) : ?>
-                                <div class="alerta error">
-                                    <?php echo $error; ?>
-                                </div>
-                            <?php endforeach; ?>
-
-                            <?php if (isset($_SESSION['resultado'])) :
-                                if ($_SESSION['resultado'] === 0) : ?>
-                                    <script>
-                                        Swal.fire({
-                                            icon: 'error',
-                                            title: 'Error al enviar email',
-                                            showConfirmButton: false,
-                                            timer: 2500
-                                        })
-                                    </script>
-                                <?php endif;
-
-                                if ($_SESSION['resultado'] === 1) : ?>
-                                    <script>
-                                        Swal.fire({
-                                            icon: 'success',
-                                            title: 'Email enviado correctamente',
-                                            showConfirmButton: false,
-                                            timer: 2500
-                                        })
-                                    </script>
-                            <?php endif;
-                            endif; ?>
 
                             <input type="submit" value="Enviar" class="btn">
                         </fieldset>
@@ -284,12 +204,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p id="copyright"></p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <script src="https://kit.fontawesome.com/59e2cd1765.js" crossorigin="anonymous"></script>
     <script src="/build/js/bundle.min.js"></script>
 </body>
 
 </html>
-<?php
-$_SESSION['resultado'] = 3;

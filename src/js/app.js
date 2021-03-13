@@ -3,15 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     owlCarousel();
     esconderMenu();
     copyright();
-    resetFormulario();
+    // resetFormulario();
     typed();
+    // enviarEmail();
     
 })
 
-function resetFormulario() {
-    const formularioContacto = document.querySelector('#formulario');
-    formularioContacto.reset();
-}
+// function resetFormulario() {
+//     const formularioContacto = document.querySelector('#formulario');
+//     formularioContacto.reset();
+// }
 
 function copyright() {
     const copyright = document.querySelector('#copyright');
@@ -165,3 +166,48 @@ function typed() {
         loop: true,
     })
 }
+
+// Envío de email
+// function enviarEmail() {
+//     const formulario = document.querySelector('#formulario');
+
+//     emailjs.init("user_8qf1JRuCro6YqSOiaiM5B");
+
+//     formulario.addEventListener('submit', e => {
+//         e.preventDefault();
+
+//         const nombre = document.querySelector('#nombre');
+//         const apellido = document.querySelector('#apellido');
+//         const email = document.querySelector('#email');
+//         const tel = document.querySelector('#tel');
+//         const empresa = document.querySelector('#empresa');
+//         const asunto = document.querySelector('#asunto');
+//         const mensaje = document.querySelector('#mensaje');
+
+//         const parametros = {
+//             name: nombre + ' ' + apellido,
+//             email: email,
+//             phone: tel,
+//             organization: empresa,
+//             subject: asunto,
+//             message: mensaje
+//         };
+
+//         emailjs.send('service_mailjet', 'form-contacto', parametros)
+//             .then(() => {
+//                 Swal.fire({
+//                     icon: 'success',
+//                     title: 'Email enviado correctamente',
+//                     showConfirmButton: false,
+//                     timer: 2500
+//                 })
+//             }, () => {
+//                 Swal.fire({
+//                     icon: 'error',
+//                     title: 'Error al enviar email',
+//                     showConfirmButton: false,
+//                     timer: 2500
+//                 })
+//             });
+//     })
+// }

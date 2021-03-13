@@ -15,10 +15,15 @@
     flex-wrap: nowrap;
 }
 
+#proyectos {
+    justify-content: space-between;
+}
+
 .owl-nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 6.5rem;
 
     i {
         display: flex;
@@ -134,4 +139,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.copyright {
+    width: 100%;
+
+    p {
+        font-size: 1.2rem;
+        text-align: right;
+        margin: 0 1rem 1rem 0;
+    }
 }
